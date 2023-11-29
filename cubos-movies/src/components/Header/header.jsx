@@ -4,7 +4,7 @@ import { SunIcon } from "@radix-ui/react-icons";
 
 const Header = () => {
   return (
-    <div className="bg-mauveDark-mauve1 border-b-purple-purple1 flex justify-between">
+    <div className="bg-mauveDark-mauve1 border-b border-purpleDark-purple12 flex justify-between fixed top-0 z-10 right-0 left-0">
       <div className="flex items-center p-5">
         <div>
           <Image src={logo} alt="logo cubos" />
