@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import background from './src/assets/public-backgropund.png'
 module.exports = {
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
@@ -114,7 +115,8 @@ module.exports = {
       xbold: 700
     }
   ,
-    extend: {},
+    extend: {
+    },
   },
   plugins: [],
 }
