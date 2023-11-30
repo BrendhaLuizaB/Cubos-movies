@@ -10,7 +10,7 @@ const SearchInput = () => {
     }
     console.log('ESTADO', inputValue)
   return (
-    <div className="text-purple-purple1 top-[5rem] relative z-10 flex justify-center mt-16">
+    <div className="text-purple-purple1 top-[5rem] relative z-1 flex justify-center mt-16">
       <input
         type="text"
         name="filter"
