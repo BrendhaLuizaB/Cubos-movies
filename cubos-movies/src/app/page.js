@@ -13,36 +13,28 @@ export default function Home() {
     queryKey: ['movies'],
     queryFn: async () => {
       const {data} = await axios.get(BASE_URL)
-      console.log("777777777777777", data)
       return data.results
     }
   }) 
-
   fetch(BASE_URL, { cache: 'force-cache' });
   return (
     <>
-      <div>
-        <Image
-          className="bg-no-repeat bg-cover bg-center h-screen w-screen relative top-0 left-0 object-cover"
-          src={background}
-          alt="Imagem de fundo"
-        />
-      </div>
+      <div className="bg-[url('./../assets/public-background.png')] flex bg-no-repeat bg-cover bg-center object-cover">
       <div
-        className="absolute top-0 left-0 h-screen w-screen"
         style={{
           background:
-            "radial-gradient(circle, rgba(18,17,19,0.8016456582633054) 0%, rgba(0,0,0,0.70640756302521) 0%, rgba(18,17,19,0.695203081232493) 100%)",
+          "linear-gradient(180deg, rgba(18,17,19,0.8016456582633054) 0%, rgba(0,0,0,0.70640756302521) 0%, rgba(18,17,19,0.695203081232493) 100%)",
         }}
-      >
-        <div className="flex justify-center">
+        >
+        <div className="flex justify-center items-center mt-32">
           <SearchInput />
           <FilterButton />
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center ">
           <MovieList data={data}/>
         </div>
       </div>
+        </div>
     </>
   );
 }

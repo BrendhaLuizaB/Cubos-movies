@@ -116,7 +116,7 @@ module.exports = {
     }
   ,
     extend: {
-      
+      // backgroundImage: {'background' :"url('./src/assets/public-background.png')"}
     },
   },
   plugins: [],
