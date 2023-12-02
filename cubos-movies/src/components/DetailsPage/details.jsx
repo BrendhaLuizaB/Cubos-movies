@@ -60,13 +60,11 @@ const profit = details?.revenue - details?.budget
                 />
               </div>
               <div
-                className="flex flex-col flex-wrap mr-5"
-                style={{ border: "solid 2px red" }}
+                className="flex flex-col flex-wrap mr-5 justify-between"
               >
-                <div className="flex flex-col justify-between">
+                <div>
                 <div
                   className="flex justify-between mt-10 items-center"
-                  style={{ border: "solid 2px blue" }}
                 >
                   <div className="flex flex-col gap-4">
                     <div>
@@ -214,8 +212,8 @@ const profit = details?.revenue - details?.budget
                 </div>
                 </div>
                   <div
-                    style={{ backgroundColor: "#44414979" }}
-                    className="mt-5 p-5"
+                    style={{ backgroundColor: "#44414979"}}
+                    className="mb-5 p-5"
                   >
                     <h1 className="text-mauveDark-mauve11 font-bold">
                       Gêneros
