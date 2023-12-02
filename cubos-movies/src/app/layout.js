@@ -1,7 +1,6 @@
 "use client";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
-// import StyledComponentsRegistry from "./registry";
 import Header from "@/components/Header/header";
 import { GlobalContextProvider } from "./Context/movieContext";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
