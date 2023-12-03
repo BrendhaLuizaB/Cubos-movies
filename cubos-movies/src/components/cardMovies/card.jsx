@@ -41,7 +41,7 @@ const CardMovies = ({ movie }) => {
 
   return (
     <div
-      className="m-2 relative transform transition-transform hover:scale-110 mb-5"
+      className="m-2 relative transform transition-transform hover:scale-110 mb-5 cursor-pointer"
       onMouseEnter={() => handleOnMouseEnter()}
       onMouseLeave={handleOnMouseLeave}
       onClick={() => handleClickMovie()}

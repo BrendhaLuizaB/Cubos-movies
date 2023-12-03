@@ -124,6 +124,12 @@ module.exports = {
     }
   ,
     extend: {
+      backgroundColor: {
+        primary: 'var(--color-bg-primary)'
+      },
+      textColor: {
+        primary: 'var(--color-text-primary)'
+      }
       // backgroundImage: {'background' :"url('./src/assets/public-background.png')"}
     },
   },

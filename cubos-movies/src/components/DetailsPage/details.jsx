@@ -32,7 +32,7 @@ const DetailsPage = () => {
   return (
     <>
       <div
-        className=" ml-6 mt-32 mb-4 flex items-center cursor-pointer"
+        className=" ml-6 mt-32 mb-4 flex items-center cursor-pointer transform transition-transform hover:scale-y-125"
         onClick={handleCloseDetails}
       >
         <button className="border-none">
