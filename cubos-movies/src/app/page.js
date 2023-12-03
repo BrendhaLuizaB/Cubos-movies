@@ -8,13 +8,15 @@ import { useContext } from "react";
 import { GlobalContext } from "./Context/movieContext";
 import DetailsPage from "@/components/DetailsPage/details";
 import Filters from "@/components/Filters/filterComponent";
+import Loading from "@/components/Loading/loading";
 
 export default function Home() {
-  const { data, movieClicked, openFilters, isLoading } = useContext(GlobalContext);
+  const { data, movieClicked, openFilters, dataLoading } =
+    useContext(GlobalContext);
 
   return (
     <>
-      <div className="bg-[url('./../assets/public-background.png')] flex justify-center bg-no-repeat bg-cover bg-center object-cover h-full">
+      {dataLoading ? <Loading /> : <div className="bg-[url('./../assets/public-background.png')] flex justify-center bg-no-repeat bg-cover bg-center object-cover h-full">
         <div
           style={{
             background:
@@ -22,7 +24,6 @@ export default function Home() {
           }}
           className="w-full"
         >
-          
           {movieClicked ? (
             <DetailsPage />
           ) : (
@@ -32,7 +33,7 @@ export default function Home() {
                 <FilterButton />
               </div>
               <div className="flex justify-center">
-                {openFilters ? <Filters/> : ''}
+                {openFilters ? <Filters /> : ""}
               </div>
               <div className="flex justify-center ">
                 <MovieList />
@@ -43,7 +44,9 @@ export default function Home() {
 
           <Footer />
         </div>
-      </div>
+      </div>}
+
+   
     </>
   );
 }

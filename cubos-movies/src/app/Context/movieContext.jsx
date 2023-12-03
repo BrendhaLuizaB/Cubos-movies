@@ -8,7 +8,6 @@ import { createContext, useContext, useState } from "react";
 export const GlobalContext = createContext();
 
 export const GlobalContextProvider = ({ children }) => {
-  const apiKey = "5e106f5be41eaa634fae58a988921697";
   const [inputValue, setInputValue] = useState("");
   const [isHovering, setIsHovering] = useState(-1);
   const [detailsId, setDetailsId] = useState('')
@@ -24,11 +23,13 @@ export const GlobalContextProvider = ({ children }) => {
       const { data } = await axios.get(`${BASE_URL}&page=${page}`);
       return data;
     },
+    staleTime: 1000 * 60, 
   });
 
-  dataLoading && <div className="bg-purple-purple3 p-64"><h1 className="text-purple-purple2">IS LOADING...</h1></div> 
+  
 
-  // console.log(data)
+  console.log("LOADING", dataLoading)
+  
   const newUrl = DETAILS_URL.replace("id", detailsId);
   const { data: details } = useQuery({
     queryKey: ["details", detailsId],
@@ -61,7 +62,7 @@ export const GlobalContextProvider = ({ children }) => {
     queryKey: [`search-${inputValue}`],
     queryFn: async () => {
       const { data } = await axios.get(
-        `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${inputValue}&page-1&include_adult=false`
+        `https://api.themoviedb.org/3/search/movie?api_key=${process.env.NEXT_PUBLIC_API_KEY}&language=en-US&query=${inputValue}&page-1&include_adult=false`
       );
       return data.results;
     },

@@ -68,7 +68,7 @@ const DetailsPage = () => {
                 />
               </div>
               <div className="flex flex-col mx-5 justify-around sm:justify-center md:justify-center">
-                  <div className="flex mt-10 flex-wrap">
+                  <div className="flex mt-10 flex-wrap items-center gap-6">
                     <div className="flex flex-col">
                         <h1 className="text-purple-purple2 font-bold text-2xl">
                           {details?.title}

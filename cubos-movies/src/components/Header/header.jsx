@@ -28,7 +28,7 @@ const Header = () => {
             </h2>
           </div>
           <div
-            className="bg-purpleDark-purple3 m-5 p-4 rounded-sm"
+            className="bg-purpleDark-purple3 m-5 p-4 rounded-sm cursor-pointer"
             onClick={handleTheme}
           >
             {theme === "dark" ? (
@@ -40,7 +40,7 @@ const Header = () => {
         </div>
       ) : (
         <div
-          className="bg-purple-purple8 flex justify-between fixed top-0 z-10 right-0 left-0"
+          className="bg-purple-purple8 flex justify-between fixed top-0 z-10 right-0 left-0 cursor-pointer"
           style={{ borderBottom: "1px solid #f1e6fd5d" }}
         >
           <div className="flex items-center p-5">
