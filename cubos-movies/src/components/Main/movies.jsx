@@ -8,7 +8,7 @@ const MovieList = () => {
     <>
       <div
         className="bg-white-400 rounded-md bg-clip-padding 
-      backdrop-filter backdrop-blur-sm bg-opacity-10 flex flex-wrap w-[88rem] justify-center p-4 mt-10"
+      backdrop-filter backdrop-blur-sm bg-opacity-10 flex flex-wrap justify-center p-4 mt-10"
       >
         {searchResults
           ? searchResults.map((movie, index) => (

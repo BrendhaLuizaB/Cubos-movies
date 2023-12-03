@@ -10,6 +10,18 @@ module.exports = {
     './src/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    screens: {
+      'sm': '375px',
+      // => @media (min-width: 640px)
+      'md': '820px',
+      // => @media (min-width: 768px)
+      'lg': '1024px',
+      // => @media (min-width: 1024px)
+      'xl': '1280px',
+      // => @media (min-width: 1280px)
+      '2xl': '1536px',
+      // => @media (min-width: 1536px)
+    },
     colors: {
       purple: {
         purple1: "#fefcfe",
@@ -94,11 +106,7 @@ module.exports = {
         mauveA10: "#ece9fd",
         mauveA11: "#f5f1ff",
         mauveA12: "#fdfdff",
-      },
-      // darkerBg: "red",
-      // lighterBg: "#444",
-      // brightTxt: "#fff",
-      // dullTxt: "#ddd",
+      }
     },
     fonts: ["Roboto", "sans-serif"],
     fontSizes: {

@@ -7,9 +7,10 @@ import Pagination from "@/components/Pagination/pagination";
 import { useContext } from "react";
 import { GlobalContext } from "./Context/movieContext";
 import DetailsPage from "@/components/DetailsPage/details";
+import Filters from "@/components/Filters/filterComponent";
 
 export default function Home() {
-  const { data, movieClicked } = useContext(GlobalContext);
+  const { data, movieClicked, openFilters, isLoading } = useContext(GlobalContext);
 
   return (
     <>
@@ -21,13 +22,17 @@ export default function Home() {
           }}
           className="w-full"
         >
+          
           {movieClicked ? (
             <DetailsPage />
           ) : (
             <div>
-              <div className="flex justify-center items-center mt-32">
+              <div className="flex justify-center items-center mt-32 gap-2">
                 <SearchInput />
                 <FilterButton />
+              </div>
+              <div className="flex justify-center">
+                {openFilters ? <Filters/> : ''}
               </div>
               <div className="flex justify-center ">
                 <MovieList />

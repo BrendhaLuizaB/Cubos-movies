@@ -9,16 +9,16 @@ const SearchInput = () => {
   };
 
   return (
-    <div className="text-purple-purple1 flex justify-center">
+    <div className="">
         <input
           type="text"
           name="filter"
           id="filter"
           placeholder="Pesquise por filmes"
-          className="p-2 w-[28rem] rounded-sm bg-mauveDark-mauve4 border-none focus:border-purpleDark-purple9"
+          className="text-purple-purple1 p-2 sm:w-48 lg:w-[25rem] md:w-[25rem] rounded-sm bg-mauveDark-mauve4 border-none focus:border-purpleDark-purple9"
           onChange={handleChange}
         />
-    </div>
+     </div>
   );
 };
 
