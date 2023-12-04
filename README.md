@@ -15,7 +15,7 @@ O Cubos Movies é um projeto que utiliza a API TMDB para oferecer uma plataforma
 - Navegação de Páginas: Os usuários podem avançar entre páginas de filmes; no entanto, se estiverem na página inicial, não é possível voltar mais.
 
 - Tela de Detalhes: Ao clicar em um card, os usuários são redirecionados para uma tela dedicada aos detalhes do filme, onde podem acessar o trailer disponibilizado pela API.
-- 
+  
 - Responsividade Total: A aplicação é totalmente responsiva, adaptando-se a diferentes dispositivos e tamanhos de tela para proporcionar uma experiência consistente em todos os contextos.
   
 Essas funcionalidades oferecem uma experiência completa e interativa aos usuários do Cubos Movies, permitindo a exploração de filmes de maneira intuitiva e personalizada.
