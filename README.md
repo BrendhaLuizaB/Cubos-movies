@@ -18,7 +18,21 @@ O Cubos Movies é um projeto que utiliza a API TMDB para oferecer uma plataforma
   
 Essas funcionalidades oferecem uma experiência completa e interativa aos usuários do Cubos Movies, permitindo a exploração de filmes de maneira intuitiva e personalizada.
 
+## Como rodar o projeto
 
+Primeiro rode o seguinte comando no terminal:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Abra em [http://localhost:3000](http://localhost:3000) no navegador.
 
 
 
