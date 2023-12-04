@@ -6,9 +6,7 @@ O Cubos Movies é um projeto que utiliza a API TMDB para oferecer uma plataforma
 
 - Temas Dinâmicos: O projeto oferece a capacidade de mudar o tema da página através de um botão no header, proporcionando uma experiência visual personalizável.
 
-- Pesquisa de Filmes: Os usuários podem buscar filmes digitando o nome desejado, tornando a busca por títulos específicos simples e direta.
-
-- Filtros por Gênero: É possível filtrar os filmes com base no gênero selecionado, proporcionando uma maneira de explorar filmes de acordo com preferências específicas.
+- Pesquisa de Filmes e filtro por gênero: Os usuários podem buscar filmes digitando o nome desejado, tornando a busca por títulos específicos simples e direta.E É possível também filtrar os filmes com base no gênero selecionado, proporcionando uma maneira de explorar filmes de acordo com preferências específicas, e se por acaso não houver um filme que corresponda às pesquisas, é retornado para o usuário uma resposta dizendo que não foram encontrados filmes com os filtros aplicados.
 
 - Detalhes no Card de Filme: Ao passar o mouse sobre um card de filme, é exibida a porcentagem de aprovação do filme, juntamente com o seu gênero, fornecendo informações adicionais rapidamente.
 
