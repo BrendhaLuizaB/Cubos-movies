@@ -34,5 +34,7 @@ bun dev
 
 Abra em [http://localhost:3000](http://localhost:3000) no navegador.
 
+Link do projeto: https://cubos-movies-eight.vercel.app/
+
 
 
