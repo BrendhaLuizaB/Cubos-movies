@@ -7,7 +7,6 @@ import { useContext } from "react";
 const Header = () => {
   const { theme, setTheme } = useContext(ThemeContext);
 
-  console.log("THEME", theme);
   const handleTheme = () => {
     setTheme(theme === "dark" ? "light" : "dark");
   };

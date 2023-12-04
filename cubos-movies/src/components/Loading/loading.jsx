@@ -1,7 +1,7 @@
 const Loading = () => {
   return (
     <div className="flex min-h-screen items-center justify-center bg-purpleDark-purple3">
-      <div className="flex gap-5">
+      <div className="flex gap-5 flex-wrap my-10 justify-center">
         <div className="relative w-72 space-y-3 overflow-hidden rounded-md bg-purpleDark-purple7 p-3 shadow before:absolute before:inset-0 before:-translate-x-full before:bg-gradient-to-r before:from-transparent before:via-white/20 hover:shadow-lg before:animate-[shimmer_1.5s_infinite]">
           <div className="h-36 w-full rounded-lg bg-purpleDark-purple9"></div>
           <div className="space-y-3">

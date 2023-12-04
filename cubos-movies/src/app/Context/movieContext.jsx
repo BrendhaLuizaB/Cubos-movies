@@ -1,6 +1,11 @@
 "use client";
 
-import { BASE_URL, DETAILS_URL, MOVIE_GENRES, MOVIE_TRAILER } from "@/urls/baseUrl";
+import {
+  BASE_URL,
+  DETAILS_URL,
+  MOVIE_GENRES,
+  MOVIE_TRAILER,
+} from "@/urls/baseUrl";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { createContext, useContext, useState } from "react";
@@ -10,26 +15,21 @@ export const GlobalContext = createContext();
 export const GlobalContextProvider = ({ children }) => {
   const [inputValue, setInputValue] = useState("");
   const [isHovering, setIsHovering] = useState(-1);
-  const [detailsId, setDetailsId] = useState('')
+  const [detailsId, setDetailsId] = useState("");
   const [page, setPage] = useState(1);
-  const [movieClicked, setMovieClicked] = useState(false)
-  const [openFilters, setOpenFilters] = useState(false)
-  const [selectedItems, setSelectedItems] = useState([]);
+  const [movieClicked, setMovieClicked] = useState(false);
+  const [openFilters, setOpenFilters] = useState(false);
+  const [selectedGenres, setSelectedGenres] = useState([]);
 
-
-  const { data, isLoading: dataLoading, isError } = useQuery({
+  const { data, isLoading: dataLoading } = useQuery({
     queryKey: ["movies", page],
     queryFn: async () => {
       const { data } = await axios.get(`${BASE_URL}&page=${page}`);
       return data;
     },
-    staleTime: 1000 * 60, 
+    staleTime: 1000 * 60,
   });
 
-  
-
-  console.log("LOADING", dataLoading)
-  
   const newUrl = DETAILS_URL.replace("id", detailsId);
   const { data: details } = useQuery({
     queryKey: ["details", detailsId],
@@ -56,8 +56,6 @@ export const GlobalContextProvider = ({ children }) => {
     },
   });
 
-  // console.log('GENRES', filter)
-
   const { data: searchResults } = useQuery({
     queryKey: [`search-${inputValue}`],
     queryFn: async () => {
@@ -83,15 +81,15 @@ export const GlobalContextProvider = ({ children }) => {
         setIsHovering,
         movieClicked,
         setMovieClicked,
-        detailsId, 
-        setDetailsId, 
-        video, 
-        openFilters, 
+        detailsId,
+        setDetailsId,
+        video,
+        openFilters,
         setOpenFilters,
-        filter, 
-        selectedItems, 
-        setSelectedItems,
-        dataLoading
+        filter,
+        selectedGenres,
+        setSelectedGenres,
+        dataLoading,
       }}
     >
       {children}

@@ -7,13 +7,3 @@
     padding: 0;
     margin: 0;
   };
-  
-.dark{
-  --color-bg-primary: #121113;
-  --color-text-primary:#faf9fb;
-};
-
-.light{
-  --color-bg-primary: #faf9fb;
-  --color-text-primary:#121113;
-}

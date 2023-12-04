@@ -1,25 +1,22 @@
 /** @type {import('tailwindcss').Config} */
-// import {background} from './src/assets/public-background.png'
 module.exports = {
   content: [
-    './app/**/*.{js,ts,jsx,tsx,mdx}', // Note the addition of the `app` directory.
-    './pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './components/**/*.{js,ts,jsx,tsx,mdx}',
- 
-    // Or if using `src` directory:
-    './src/**/*.{js,ts,jsx,tsx,mdx}',
+    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
     screens: {
-      'sm': '375px',
+      sm: "375px",
       // => @media (min-width: 640px)
-      'md': '820px',
+      md: "820px",
       // => @media (min-width: 768px)
-      'lg': '1024px',
+      lg: "1024px",
       // => @media (min-width: 1024px)
-      'xl': '1280px',
+      xl: "1280px",
       // => @media (min-width: 1280px)
-      '2xl': '1536px',
+      "2xl": "1536px",
       // => @media (min-width: 1536px)
     },
     colors: {
@@ -106,7 +103,7 @@ module.exports = {
         mauveA10: "#ece9fd",
         mauveA11: "#f5f1ff",
         mauveA12: "#fdfdff",
-      }
+      },
     },
     fonts: ["Roboto", "sans-serif"],
     fontSizes: {
@@ -120,18 +117,10 @@ module.exports = {
       light: 100,
       normal: 300,
       bold: 500,
-      xbold: 700
-    }
-  ,
+      xbold: 700,
+    },
     extend: {
-      backgroundColor: {
-        primary: 'var(--color-bg-primary)'
-      },
-      textColor: {
-        primary: 'var(--color-text-primary)'
-      }
-      // backgroundImage: {'background' :"url('./src/assets/public-background.png')"}
     },
   },
   plugins: [],
-}
+};

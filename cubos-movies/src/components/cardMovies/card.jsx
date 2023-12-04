@@ -1,16 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import { GlobalContext } from "@/app/Context/movieContext";
-import { DETAILS_URL } from "@/urls/baseUrl";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
-import { useContext, useState } from "react";
+import { useContext } from "react";
 
 const CardMovies = ({ movie }) => {
   const IMAGE_API = "https://image.tmdb.org/t/p/w500";
   const { isHovering, setIsHovering, detailsId, setDetailsId, setMovieClicked, details } =
     useContext(GlobalContext);
 
-    // console.log(movie)
   const handleOnMouseEnter = () => {
     setIsHovering(movie.id);
     setDetailsId(movie.id);
@@ -48,11 +44,11 @@ const CardMovies = ({ movie }) => {
     >
       <img
         src={IMAGE_API + movie?.poster_path || IMAGE_API + movie?.backdrop_path}
-        className="w-[15rem] rounded-sm "
+        className="w-[15rem] rounded-md "
         alt="movie-poster"
       />
-      <div className={crossClass()}>
-        <h1 className="text-[#FFE000] text-base font-semibold">
+      <div className={crossClass()} style={{border:'solid 6px #FFE000'}}>
+        <h1 className="text-[#FFE000] text-lg font-semibold">
           {Math.round(percentage)}
           <span className="text-purple-purple1">%</span>
         </h1>
@@ -68,9 +64,9 @@ const CardMovies = ({ movie }) => {
         <p className={detailsClass()}>
           {details?.genres.map((genre, index) => {
             if (index === genre.length - 1) {
-              return genre.name; // Não adicionar vírgula e espaço para o último item
+              return genre.name; 
             } else {
-              return `${genre.name}, `; // Adicionar vírgula e espaço para os demais itens
+              return `${genre.name}, `; 
             }
           })}
         </p>

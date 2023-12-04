@@ -11,7 +11,7 @@ import Filters from "@/components/Filters/filterComponent";
 import Loading from "@/components/Loading/loading";
 
 export default function Home() {
-  const { data, movieClicked, openFilters, dataLoading } =
+  const { movieClicked, openFilters, dataLoading } =
     useContext(GlobalContext);
 
   return (
@@ -41,12 +41,9 @@ export default function Home() {
               <Pagination />
             </div>
           )}
-
           <Footer />
         </div>
       </div>}
-
-   
     </>
   );
 }
